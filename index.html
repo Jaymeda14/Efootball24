@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semifinais e Finais</title>
+    <style>
+       
+        header{
+            height: 07vh;
+            width: 100cw;
+            display: flex;
+            font-size: .8em;
+            align-items: center;
+            justify-content: space-evenly;
+            border-bottom: 1px solid black; 
+            margin-bottom: 02px;   
+            background-color: lightgoldenrodyellow;                   
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+            width: 300px;
+            margin: auto;
+            padding-bottom: 10px;
+            background-color: lightgoldenrodyellow;
+        }
+        div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid black;
+            width: 290px;
+            height: 35px;
+
+        }
+        input{
+            height: 16px;
+            width: 30px;
+            margin: 10px;
+            border: none;
+            border-bottom: 1px solid black;
+        }
+        p{
+            margin: 10px;
+        }
+        img{
+            height: 40px;
+        }       
+    </style>
+
+</head>
+<body>
+    <header>
+        <img src="imagens/efootball-logo.png" alt="">
+        <h1>Torneio eFootball 2024</h1>
+    </header>
+    <main>
+        
+        <h2>Semifinais</h2>
+        <h3>1º Confronto</h3>
+        
+        <p>Jogo de Ida</p>
+        <div>
+            <p>
+                <label for="jeovane1">Jeovane</label>
+                <input type="number" id="jeovane1">
+            </p>
+            <p>X</p>
+            <p>
+                <input type="number" id="eliel1">
+                <label for="eliel1">Eliel</label>
+            </p>
+        </div>
+        <p>Jogo de Volta</p>
+        <div>
+            <p>
+                <label for="eliel2">Eliel</label>
+                <input type="number" id="eliel2">
+            </p>
+            <p>X</p>
+            <p>
+                <input type="number" id="jeovane2">
+                <label for="jeovane2">Jeovane</label>
+            </p>
+        </div>
+        
+        <h3>2º Confronto</h3>
+        
+        <p>Jogo de Ida</p>
+        <div>
+            <p>
+                <label for="halamir1">Halamir</label>
+                <input type="number" id="halamir1">
+            </p>
+            <p>X</p>
+            <p>
+                <input type="number" id="kalebe1">
+                <label for="kalebe1">Kalebe</label>
+            </p>
+        </div>
+        <p>Jogo de Volta</p>
+        <div>
+            <p>
+                <label for="kalebe2">Kalebe</label>
+                <input type="number" id="kalebe2">
+            </p>
+            <p>X</p>
+            <p>
+                <input type="number" id="halamir2">
+                <label for="halamir2">Halamir</label>
+            </p>
+        </div>   
+        <h3>Finais</h3>
+        <div>
+            <p>
+                <label for="win1">Win 1</label>
+                <input type="number" id="win1">
+            </p>
+            <p>X</p>
+            <p>
+                <input type="number" id="win2">
+                <label for="win2">Win 2</label>
+            </p>
+        </div>       
+    </main>
+
+    <script>
+        let confronto1 = [{jogador: "Jeovane", gols: 0}, {jogador: "Eliel", gols: 0}]
+        let confronto2 = [{jogador: "Halamir", gols: 0}, {jogador: "Kalebe", gols: 0}]
+
+        function semis(){
+            let jogo1 = document.getElementById('semi1')
+            let jogo2 = document.getElementById('semi2')
+
+            jogo1.innerHTML = `${confronto1[0].jogador} x ${confronto1[1].jogador}`
+            jogo2.innerHTML = `${confronto2[0].jogador} x ${confronto2[1].jogador}`
+
+        }
+
+        semis()
+
+
+
+    </script>
+</body>
+</html>
